@@ -24,6 +24,10 @@ export const Login = () => {
           />
         </div>
         <input type="button" value="Submit" className="submit-btn" />
+        <div className="form-submit">
+          <input type="checkbox" className="checkbox-btn" />
+          <p className="remember-text">Lembrar meu E-mail e Senha</p>
+        </div>
       </div>
     </>
   );

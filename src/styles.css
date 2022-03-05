@@ -61,8 +61,19 @@ body {
   height: 30px;
 }
 
+.form-submit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .submit-btn {
   width: 200px;
   height: 30px;
   color: black;
+}
+
+.checkbox-btn {
+  width: 20px;
+  height: 20px;
 }
