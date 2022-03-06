@@ -1,3 +1,9 @@
+* {
+  --gil-font: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  --black-color: black;
+  --normal-font: 400;
+}
+
 html {
   font-size: 18px;
   color: white;
@@ -38,16 +44,16 @@ body {
 }
 
 .label-login {
-  color: black;
+  color: var(--black-color);
   font-weight: 400;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--gil-font);
   margin: 0 20px 0 0;
 }
 
 .label-password {
-  color: black;
+  color: var(--black-color);
   font-weight: 400;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: var(--gil-font);
   margin: 0 20px 0 0;
 }
 
@@ -61,8 +67,25 @@ body {
   height: 30px;
 }
 
+.form-submit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
 .submit-btn {
   width: 200px;
   height: 30px;
-  color: black;
+  color: var(--black-color);
+}
+
+.checkbox-btn {
+  width: 20px;
+  height: 20px;
+}
+
+.remember-text {
+  color: var(--black-color);
+  font-weight: 400;
+  font-family: var(--gil-font);
 }
