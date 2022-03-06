@@ -14,12 +14,20 @@ export const Register = () => {
             Faz o cadastro e chega junto !
           </S.RegisterSubtitle>
           <S.NickNameContainer>
-            <S.Label>NickName</S.Label>
-            <S.Input type="text" placeholder="type your NickName" />
+            <S.Label htmlFor="nick-name">NickName</S.Label>
+            <S.Input
+              type="text"
+              id="nick-name"
+              placeholder="type your NickName"
+            />
           </S.NickNameContainer>
           <S.PasswordContainer>
-            <S.Label>Password</S.Label>
-            <S.Input type="text" placeholder="type your password" />
+            <S.Label htmlFor="password">Password</S.Label>
+            <S.Input
+              type="text"
+              id="password"
+              placeholder="type your password"
+            />
           </S.PasswordContainer>
           <S.SubmitButton type="submit" onClick={handleDefault} />
         </S.Form>
