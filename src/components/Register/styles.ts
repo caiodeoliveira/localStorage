@@ -19,11 +19,16 @@ export const Form = styled.form`
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 80px;
+  gap: 30px;
 `;
 
 export const RegisterTitle = styled.h1`
   color: white;
+  font-family: "Gill Sans MT";
+  font-weight: 400;
+`;
+
+export const RegisterSubtitle = styled.h2`
   font-family: "Gill Sans MT";
   font-weight: 400;
 `;

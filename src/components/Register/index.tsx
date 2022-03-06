@@ -6,6 +6,9 @@ export const Register = () => {
       <S.Container>
         <S.Form>
           <S.RegisterTitle>Bem-Vindo !</S.RegisterTitle>
+          <S.RegisterSubtitle>
+            Faz o cadastro e chega junto !
+          </S.RegisterSubtitle>
           <S.NickNameContainer>
             <S.Label>NickName</S.Label>
             <S.Input type="text" placeholder="type your NickName" />
