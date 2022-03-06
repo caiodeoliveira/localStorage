@@ -20,3 +20,10 @@ export const Form = styled.form`
   align-items: center;
   justify-content: center;
 `;
+
+export const Label = styled.label`
+  color: black;
+  font-size: 18px;
+  font-family: "Gill Sans MT";
+  font-weight: 400;
+`;

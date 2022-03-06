@@ -5,7 +5,9 @@ export const Register = () => {
   return (
     <>
       <S.Container>
-        <S.Form></S.Form>
+        <S.Form>
+          <S.Label>NickName</S.Label>
+        </S.Form>
       </S.Container>
     </>
   );
