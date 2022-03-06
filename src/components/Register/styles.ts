@@ -71,3 +71,10 @@ export const PasswordContainer = styled.div`
   align-items: center;
   justify-content: space-evenly;
 `;
+
+export const DataPersistContainer = styled.div`
+  width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+`;

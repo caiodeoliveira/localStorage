@@ -22,6 +22,7 @@ export const Register = () => {
             <S.Input type="text" placeholder="type your password" />
           </S.PasswordContainer>
           <S.SubmitButton type="submit" onClick={handleDefault} />
+          <S.DataPersistContainer></S.DataPersistContainer>
         </S.Form>
       </S.Container>
     </>
