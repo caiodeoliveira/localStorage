@@ -6,4 +6,17 @@ export const Container = styled.div`
   height: 100vh;
   background: url(${register});
   filter: brightness(65%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const Form = styled.form`
+  border: solid black 1px;
+  border-radius: 5px;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
