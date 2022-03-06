@@ -1,4 +1,3 @@
-import React from "react";
 import * as S from "./styles";
 
 export const Register = () => {
@@ -6,7 +5,15 @@ export const Register = () => {
     <>
       <S.Container>
         <S.Form>
-          <S.Label>NickName</S.Label>
+          <S.RegisterTitle>Bem-Vindo !</S.RegisterTitle>
+          <S.NickNameContainer>
+            <S.Label>NickName</S.Label>
+            <S.Input type="text" placeholder="type your NickName" />
+          </S.NickNameContainer>
+          <S.PasswordContainer>
+            <S.Label>Password</S.Label>
+            <S.Input type="text" placeholder="type your password" />
+          </S.PasswordContainer>
         </S.Form>
       </S.Container>
     </>
