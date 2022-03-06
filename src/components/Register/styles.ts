@@ -5,7 +5,7 @@ export const Container = styled.div`
   width: 100vw;
   height: 100vh;
   background: url(${register});
-  filter: brightness(65%);
+  filter: brightness(80%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,6 +51,11 @@ export const Input = styled.input`
   border: green 3px solid;
   border-radius: 5px;
   outline: none;
+`;
+
+export const SubmitButton = styled.input`
+  margin-top: 40px;
+  min-width: 10%;
 `;
 
 export const NickNameContainer = styled.div`

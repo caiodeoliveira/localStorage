@@ -1,6 +1,10 @@
 import * as S from "./styles";
 
 export const Register = () => {
+  const handleDefault = (event: any) => {
+    event.preventDefault();
+  };
+
   return (
     <>
       <S.Container>
@@ -17,6 +21,7 @@ export const Register = () => {
             <S.Label>Password</S.Label>
             <S.Input type="text" placeholder="type your password" />
           </S.PasswordContainer>
+          <S.SubmitButton type="submit" onClick={handleDefault} />
         </S.Form>
       </S.Container>
     </>
