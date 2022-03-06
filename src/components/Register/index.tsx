@@ -1,6 +1,12 @@
 import React from "react";
 import * as S from "./styles";
 
-const Register = () => {
-  return <S.Container></S.Container>;
+export const Register = () => {
+  return (
+    <>
+      <S.Container>
+        <h1>Bem-Vindo !</h1>
+      </S.Container>
+    </>
+  );
 };
