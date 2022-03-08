@@ -4,7 +4,7 @@ import register from "../../assets/register.jpg";
 export const Container = styled.div`
   width: 100vw;
   height: 100vh;
-  background: url(${register});
+  background: url(${register}) no-repeat;
   filter: brightness(80%);
   display: flex;
   align-items: center;
@@ -42,7 +42,7 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-  max-width: 50%;
+  min-width: 50%;
   height: 25px;
   padding: 2px 10px;
   font-family: "Gill Sans MT";
