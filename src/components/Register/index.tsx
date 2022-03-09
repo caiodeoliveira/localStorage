@@ -1,14 +1,17 @@
 import * as S from "./styles";
 import { useFormik } from "formik";
+import { useNavigate } from "react-router-dom";
 
 export const Register = () => {
-  const handleSubmit = (event: any) => {
-    alert("Data sended check your localstorage");
-  };
+  const navigate = useNavigate();
 
-  const insertIntoLocalStorage = (event: any) => {
-    const localStorageValue = event.target.value;
-    localStorage.setItem("@NickName", JSON.stringify(localStorageValue));
+  const handleSend = (e: any) => {
+    e.preventDefault();
+    return localStorage.getItem("@Data")?.includes(".com")
+      ? navigate("/home")
+      : alert(
+          "The field email is filled wrong, please fill the field correctly and try again"
+        );
   };
 
   const formik = useFormik({
@@ -24,7 +27,7 @@ export const Register = () => {
   return (
     <>
       <S.Container>
-        <S.Form onSubmit={formik.handleSubmit}>
+        <S.Form onChange={formik.handleSubmit}>
           <S.RegisterTitle>Bem-Vindo !</S.RegisterTitle>
           <S.RegisterSubtitle>
             Faz o cadastro e chega junto !
@@ -43,12 +46,14 @@ export const Register = () => {
           <S.PasswordContainer>
             <S.Label htmlFor="password">Password</S.Label>
             <S.Input
+              onChange={formik.handleChange}
+              value={formik.values.password}
               type="text"
               id="password"
               placeholder="type your password"
             />
           </S.PasswordContainer>
-          <S.SubmitButton type="submit" value="Submit" />
+          <S.SubmitButton type="submit" value="Submit" onClick={handleSend} />
         </S.Form>
       </S.Container>
     </>
