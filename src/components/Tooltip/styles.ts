@@ -1,4 +1,3 @@
-import styled from "styled-components";
 import { Tooltip, withStyles } from "@material-ui/core";
 
 export const Tooltips = withStyles(() => ({
