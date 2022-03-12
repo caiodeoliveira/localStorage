@@ -1,12 +1,6 @@
 import * as S from "./styles";
-import FiAlertCircle from "react-icons/fi";
+import { TooltipProps } from "./types";
 
-const Tooltip = () => {
-  return (
-    <div>
-      <li></li>
-    </div>
-  );
+export const Tooltip = ({ title }: TooltipProps) => {
+  return <Tooltip title={title} />;
 };
-
-export default Tooltip;
