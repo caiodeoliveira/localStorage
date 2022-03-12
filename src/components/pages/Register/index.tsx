@@ -2,6 +2,9 @@ import * as S from "./styles";
 import { useFormik } from "formik";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
+import { Tooltip } from "../../Tooltip";
+import { Input } from "../../Input";
+import FiAlertCircle from "react-icons/fi";
 
 export const Register = () => {
   const navigate = useNavigate();
@@ -21,11 +24,8 @@ export const Register = () => {
       password: "",
     },
     validationSchema: yup.object({
-      login: yup.string().email("e-mail invalid format").required("Required"),
-      password: yup
-        .string()
-        .min(8, "Must be 8 characters or more")
-        .required("required"),
+      login: yup.string().email("e-mail invalid format").required("*"),
+      password: yup.string().min(7).required("*"),
     }),
     onSubmit: (values) => {
       localStorage.setItem("@Data", JSON.stringify(values));
@@ -50,9 +50,9 @@ export const Register = () => {
               id="login"
               placeholder="type your NickName"
             />
-            {/* {formik.touched.login && formik.errors.login ? (
+            {formik.touched.login && formik.errors.login ? (
               <div>{formik.errors.login}</div>
-            ) : null} */}
+            ) : null}
           </S.NickNameContainer>
           <S.PasswordContainer>
             <S.Label htmlFor="password">Password</S.Label>
@@ -64,7 +64,9 @@ export const Register = () => {
             />
             {formik.touched.password && formik.errors.password ? (
               <div>{formik.errors.password}</div>
-            ) : null}
+            ) : (
+              ""
+            )}
           </S.PasswordContainer>
           <S.SubmitButton type="submit" value="Submit" onClick={handleSend} />
         </S.Form>

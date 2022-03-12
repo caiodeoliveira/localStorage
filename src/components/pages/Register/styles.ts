@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import register from "../../assets/register.jpg";
+import register from "../../../assets/register.jpg";
 
 export const Container = styled.div`
   width: 100vw;

@@ -1,4 +1,4 @@
-import "../../styles.css";
+import "../../../styles.css";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export const Login = () => {
