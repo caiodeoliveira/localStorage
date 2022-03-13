@@ -51,11 +51,24 @@ export const Input = styled.input`
   border: green 3px solid;
   border-radius: 5px;
   outline: none;
+
+  & > .error {
+    border: 2px solid red;
+  }
 `;
 
 export const SubmitButton = styled.input`
   margin-top: 40px;
   min-width: 10%;
+
+  &.disabled {
+    background-color: grey;
+    border: none;
+  }
+
+  &.submit {
+    background-color: white;
+  }
 `;
 
 export const NickNameContainer = styled.div`

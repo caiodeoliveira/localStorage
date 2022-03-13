@@ -12,7 +12,7 @@ export const Register = () => {
   const handleSend = (e: any) => {
     e.preventDefault();
     return localStorage.getItem("@Data")?.includes(".com")
-      ? navigate("/home")
+      ? /*navigate("/home")*/ alert("correct")
       : alert(
           "The field email is filled wrong, please fill the field correctly and try again"
         );
@@ -24,8 +24,8 @@ export const Register = () => {
       password: "",
     },
     validationSchema: yup.object({
-      login: yup.string().email("e-mail invalid format").required("*"),
-      password: yup.string().min(7).required("*"),
+      login: yup.string().email("e-mail invalid format").required("Required"),
+      password: yup.string().min(7).required("Required"),
     }),
     onSubmit: (values) => {
       localStorage.setItem("@Data", JSON.stringify(values));
@@ -49,6 +49,7 @@ export const Register = () => {
               name="login"
               id="login"
               placeholder="type your NickName"
+              className={formik.errors.login ? "error" : ""}
             />
             {formik.touched.login && formik.errors.login ? (
               <div>{formik.errors.login}</div>
@@ -60,6 +61,7 @@ export const Register = () => {
               type="text"
               id="password"
               placeholder="type your password"
+              className={formik.errors ? "error" : ""}
               {...formik.getFieldProps("password")}
             />
             {formik.touched.password && formik.errors.password ? (
@@ -68,7 +70,19 @@ export const Register = () => {
               ""
             )}
           </S.PasswordContainer>
-          <S.SubmitButton type="submit" value="Submit" onClick={handleSend} />
+          <S.SubmitButton
+            type="submit"
+            value="Submit"
+            onClick={handleSend}
+            disabled={
+              formik.errors.login || formik.errors.password ? true : false
+            }
+            className={
+              formik.errors.login || formik.errors.password
+                ? "disabled"
+                : "submit"
+            }
+          />
         </S.Form>
       </S.Container>
     </>
